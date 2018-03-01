@@ -1,0 +1,107 @@
+<nav class="[ navbar navbar-fixed-top ][ navbar-bootsnipp animate ]" [class.isTransparant]='isTransparant' role="navigation">
+  <div class="[ container ]">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="[ navbar-header ]">
+      <button type="button" class="[ navbar-toggle ] collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="[ animbrand ]">
+        <a class="[ navbar-brand ][ animate ]" routerLink="/">GopalPaints</a>
+      </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="[ collapse navbar-collapse ]" id="bs-example-navbar-collapse-1">
+      <ul class="[ nav navbar-nav navbar-right ]">
+        <li class="[ visible-xs ]">
+          <form action="http://bootsnipp.com/search" method="GET" role="search">
+            <div class="[ input-group ]">
+              <input type="text" class="[ form-control ]" name="q" placeholder="Search for snippets">
+              <span class="[ input-group-btn ]">
+                <button class="[ btn btn-primary ]" type="submit">
+                  <span class="[ glyphicon glyphicon-search ]"></span>
+                </button>
+                <button class="[ btn btn-danger ]" type="reset">
+                  <span class="[ glyphicon glyphicon-remove ]"></span>
+                </button>
+              </span>
+            </div>
+          </form>
+        </li>
+        <li>
+          <a routerLink="/" class="[ animate ]">Home</a>
+        </li>
+        <li class="[ dropdown ]">
+          <a class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Profile
+            <span class="[ caret ]"></span>
+          </a>
+          <ul class="[ dropdown-menu ]" role="menu">
+            <li>
+              <a routerLink="/aboutus" class="[ animate ]">About Us
+              </a>
+            </li>
+            <li>
+              <a routerLink="/policy" class="[ animate ]">Policy And Terms
+              </a>
+            </li>
+            <li>
+              <a href="#" class="[ animate ]">Product Brochure
+              </a>
+            </li>
+            <li>
+              <a href="#" class="[ animate ]">Product Portfolio </a>
+            </li>
+            <li>
+              <a routerLink="/quality" class="[ animate ]">Quality
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="[ dropdown ]">
+          <a  class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Product Range
+            <span class="[ caret ]"></span>
+          </a>
+          <ul class="[ dropdown-menu ]" role="menu">
+            <li>
+              <a routerLink="/productsrange" class="[ animate ]">Enamel Paints
+              </a>
+            </li>
+            <li>
+              <a routerLink="/productsrange" class="[ animate ]">Bitumen Paint 1
+              </a>
+            </li>
+            <li>
+              <a routerLink="/productsrange" class="[ animate ]">Tespaint
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="animate" routerLink="/contactus">Contact Us</a>
+        </li>
+        <li class="[ hidden-xs ]" (click)="search()">
+          <a class="[ animate ]">
+            <span class="[ glyphicon glyphicon-search ]"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="[ bootsnipp-search animate ]" [class.open]="isOpened">
+    <div class="[ container ]">
+      <form action="http://bootsnipp.com/search" method="GET" role="search">
+        <div class="[ input-group ]">
+          <input type="text" [(ngModel)]='inputSearch' class="[ form-control ]" name="q" placeholder="Search Here">
+          <span class="[ input-group-btn ]">
+            <button class="[ btn btn-danger ]" type="reset" (click)="search()">
+              <span class="[ glyphicon glyphicon-remove ]"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>

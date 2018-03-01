@@ -1,0 +1,9 @@
+#video-background {
+    /*  making the video fullscreen  */
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin:0 auto;
+    z-index: -100;
+}

@@ -1,0 +1,9 @@
+.aboutusContent {
+    padding: 0 46px;
+}
+
+.aboutusContent .lg-text {
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #0099CC;
+}
