@@ -12,6 +12,11 @@ import { QualityComponent } from './quality/quality.component';
   imports: [RouterModule.forRoot([
     {
       path: '',
+      redirectTo: 'home',
+      pathMatch: 'full'
+    },
+    {
+      path: 'home',
       component: FullScreenVideoComponent
     },
     {
@@ -19,7 +24,7 @@ import { QualityComponent } from './quality/quality.component';
       component: AboutusComponent
     },
     {
-      path: 'paintcategorylist',
+      path: 'paintcategorylist/:categoryId',
       component: ListPaintCategoryItemsComponent
     },
     {
