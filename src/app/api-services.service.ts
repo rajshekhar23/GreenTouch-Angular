@@ -12,6 +12,7 @@ export class ApiServicesService {
   private _productDetailsByCategoryIdUrl = 'http://localhost/neelu/product.php?categoryId=';
   private _allProductsIfNotCategoryId = 'http://localhost/neelu/allProducts.php';
   private _qualityUrl = 'http://localhost/neelu/quality.php';
+  private _policyAndTerms = 'http://localhost/neelu/policyTerm.php';
 
   constructor(private _http: Http) { }
 
@@ -34,6 +35,13 @@ export class ApiServicesService {
 
   getQuality() {
     return this._http.get(this._qualityUrl)
+      .map((response: Response) => {
+        return response.json();
+      }).catch(this.handleError);
+  }
+
+  getPolicyAndTerm() {
+    return this._http.get(this._policyAndTerms)
       .map((response: Response) => {
         return response.json();
       }).catch(this.handleError);
