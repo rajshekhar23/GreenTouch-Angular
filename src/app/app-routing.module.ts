@@ -7,6 +7,8 @@ import { ProductsRangeComponent } from './products-range/products-range.componen
 import { ContactusComponent } from './contactus/contactus.component';
 import { PolicyTermsComponent } from './policy-terms/policy-terms.component';
 import { QualityComponent } from './quality/quality.component';
+import { ProductPortfolioComponent } from './product-portfolio/product-portfolio.component';
+import { ProductBrochureComponent } from './product-brochure/product-brochure.component';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -14,6 +16,10 @@ import { QualityComponent } from './quality/quality.component';
       path: '',
       redirectTo: 'home',
       pathMatch: 'full'
+    },
+    {
+      path: 'productportfolio',
+      component: ProductPortfolioComponent
     },
     {
       path: 'home',
@@ -42,6 +48,10 @@ import { QualityComponent } from './quality/quality.component';
     {
       path: 'quality',
       component: QualityComponent
+    },
+    {
+      path: 'product-brochure',
+      component: ProductBrochureComponent
     }
   ])],
   exports: [RouterModule],

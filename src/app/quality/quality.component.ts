@@ -8,7 +8,7 @@ import { ApiServicesService } from '../api-services.service';
   providers: [ApiServicesService]
 })
 export class QualityComponent implements OnInit {
-  private _allQuality: any;
+  _allQuality: any;
   constructor(private _apiService: ApiServicesService) { }
 
   ngOnInit() {

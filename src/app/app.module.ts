@@ -3,9 +3,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { StudentComponent } from './student/student.component';
 import { SharedModule } from './shared/shared.module';
-import { StudentModule } from './student/student.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ListPaintCategoryItemsComponent } from './list-paint-category-items/list-paint-category-items.component';
@@ -17,6 +15,8 @@ import { FullScreenVideoComponent } from './full-screen-video/full-screen-video.
 import { AgmCoreModule } from '@agm/core';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProductPortfolioComponent } from './product-portfolio/product-portfolio.component';
+import { ProductBrochureComponent } from './product-brochure/product-brochure.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,9 @@ import { FooterComponent } from './footer/footer.component';
     PolicyTermsComponent,
     FullScreenVideoComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProductPortfolioComponent,
+    ProductBrochureComponent
   ],
   imports: [
     AppRoutingModule,
