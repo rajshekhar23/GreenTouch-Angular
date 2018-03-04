@@ -1,10 +1,17 @@
-.aboutusContent {
-    padding: 10px 46px;
-    border:1px solid #0099CC;
+.image-aboutus-banner {
+    background: url('2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+    height: 555px;
 }
 
-.aboutusContent .lg-text {
-    padding-bottom: 5px;
-    text-transform: uppercase;
+.aboutusContent {
+    padding: 0 15px;
+    border: 1px solid #ededed;
+}
+.aboutusContent .lg-text{
+    padding-bottom:5px;
+    text-transform: uppercase; 
     border-bottom: 3px solid #0099CC;
 }

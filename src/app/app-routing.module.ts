@@ -14,8 +14,7 @@ import { ProductBrochureComponent } from './product-brochure/product-brochure.co
   imports: [RouterModule.forRoot([
     {
       path: '',
-      redirectTo: 'home',
-      pathMatch: 'full'
+      component: FullScreenVideoComponent
     },
     {
       path: 'productportfolio',

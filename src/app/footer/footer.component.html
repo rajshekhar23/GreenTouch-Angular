@@ -19,7 +19,7 @@
               <a routerLink="/quality">Quality</a>
             </li>
             <li>
-              <a href="#">Product Brochure</a>
+              <a routerLink='/product-brochure'>Product Brochure</a>
             </li>
           </ul>
         </nav>
@@ -27,14 +27,8 @@
           <h3>Product Range
           </h3>
           <ul>
-            <li>
-              <a routerLink="/paintcategorylist">Enamel Paint</a>
-            </li>
-            <li>
-              <a routerLink="/paintcategorylist">Bitumen Paints 1</a>
-            </li>
-            <li>
-              <a routerLink="/paintcategorylist">Tespaint</a>
+            <li *ngFor='let product of _allProductCategories'>
+              <a [routerLink]="['/paintcategorylist', product.c_id]">{{product.c_name}}</a>
             </li>
           </ul>
         </nav>
@@ -60,7 +54,7 @@
 
   <div class="footer-bottom">
     <div class="container">
-      <div class="pull-left"> Copyright © XXX-XXX-XXX 2018. All right reserved.</div>
+      <div class="pull-right"> Copyright © Green-Touch Pvt Ltd. 2018. All right reserved.</div>
       <div class="pull-right" style='display:none;'>
         <ul style="margin:0;">
           <li>

@@ -134,8 +134,8 @@
     background-color: rgb(235, 235, 235);
     border-radius: 0px;
     border-width: 0px;
-    font-size: 24px;
-    padding: 25px 0px;
+    font-size: 20px;
+    padding: 21px 0px;
 }
 
 .navbar-bootsnipp .bootsnipp-search .form-control:focus {
@@ -146,14 +146,8 @@
 }
 
 .navbar-bootsnipp .bootsnipp-search .input-group-btn>.btn {
-    padding: 14px 16px;
+    padding: 10px;
     border-radius: 0px;
-}
-
-.navbar-bootsnipp .bootsnipp-search .input-group-btn>.btn.active,
-.navbar-bootsnipp .bootsnipp-search .input-group-btn>.btn:hover,
-.navbar-bootsnipp .bootsnipp-search .input-group-btn>.btn:focus {
-    padding: 14px 16px 14px 15px;
 }
 
 .navbar-bootsnipp .bootsnipp-search .input-group-btn>.btn-default {
@@ -162,6 +156,12 @@
 
 .nav-padding {
     padding-top: 61px;
+}
+
+@media (max-width: 480px) {
+    .searchMenu {
+        display: none !important;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -188,7 +188,6 @@
         padding-right: 10px;
     }
     .navbar-bootsnipp .bootsnipp-search {
-        background-color: rgb(235, 235, 235);
         display: block;
         position: absolute;
         top: 100%;
@@ -223,11 +222,37 @@
     margin-top: 0;
 }
 
-
-.isTransparant{
+.isTransparant {
     background-color: transparent !important;
 }
 
+
 /*End navbar */
 
+.searchResult {
+    width: 331px;
+    float: right;
+}
 
+.seachBox {
+    float: right;
+    width: 26%;
+}
+
+.searchResult {
+    background-color: #fff;
+    padding-left: 3px;
+}
+
+.searchResult .seachResultItems {
+    display: block;
+    padding: 10px 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.seachResultItems:hover {
+    background-color: rgb(235, 235, 235);
+    z-index: 1000;
+}

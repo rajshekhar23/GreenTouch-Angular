@@ -16,7 +16,8 @@
 }
 
 .footer ul a:hover {
-    background-color: #3f3f3f;
+    color:dimgrey;
+    text-transform: uppercase;
 }
 
 .footer2 a:hover,

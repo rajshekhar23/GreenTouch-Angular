@@ -16,7 +16,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="[ collapse navbar-collapse ]" id="bs-example-navbar-collapse-1">
       <ul class="[ nav navbar-nav navbar-right ]">
-        <li class="[ visible-xs ]">
+        <li class="[ visible-xs ] searchMenu">
           <form action="http://bootsnipp.com/search" method="GET" role="search">
             <div class="[ input-group ]">
               <input type="text" class="[ form-control ]" name="q" placeholder="Search for snippets">
@@ -32,7 +32,7 @@
           </form>
         </li>
         <li>
-          <a routerLink="/" class="[ animate ]">Home</a>
+          <a routerLink="/home" class="[ animate ]">Home</a>
         </li>
         <li class="[ dropdown ]">
           <a class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Profile
@@ -61,28 +61,19 @@
           </ul>
         </li>
         <li class="[ dropdown ]">
-          <a  class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Product Range
+          <a class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Product Range
             <span class="[ caret ]"></span>
           </a>
           <ul class="[ dropdown-menu ]" role="menu">
-            <li>
-              <a routerLink="/productsrange" class="[ animate ]">Enamel Paints
-              </a>
-            </li>
-            <li>
-              <a routerLink="/productsrange" class="[ animate ]">Bitumen Paint 1
-              </a>
-            </li>
-            <li>
-              <a routerLink="/productsrange" class="[ animate ]">Tespaint
-              </a>
+            <li *ngFor='let product of _allProductCategories'>
+              <a [routerLink]="['/paintcategorylist', product.c_id]">{{product.c_name}}</a>
             </li>
           </ul>
         </li>
         <li>
           <a class="animate" routerLink="/contactus">Contact Us</a>
         </li>
-        <li class="[ hidden-xs ]" (click)="search()">
+        <li class="searchMenu [ hidden-xs ]" (click)="search()">
           <a class="[ animate ]">
             <span class="[ glyphicon glyphicon-search ]"></span>
           </a>
@@ -94,12 +85,17 @@
     <div class="[ container ]">
       <form action="http://bootsnipp.com/search" method="GET" role="search">
         <div class="[ input-group ]">
-          <input type="text" [(ngModel)]='inputSearch' class="[ form-control ]" name="q" placeholder="Search Here">
+          <input type="text" class='form-control seachBox' placeholder="Search By Product Category" aria-label="Number" matInput [formControl]="searchTerm"
+          />
           <span class="[ input-group-btn ]">
             <button class="[ btn btn-danger ]" type="reset" (click)="search()">
               <span class="[ glyphicon glyphicon-remove ]"></span>
             </button>
           </span>
+        </div>
+        <div class='searchResult' *ngIf='searchResult'>
+          <a *ngFor="let item of searchResult" class='seachResultItems' [routerLink]="['/paintcategorylist', item.cat_id]"
+            (click)="isOpened = !isOpened">{{item.cat_name}}</a>
         </div>
       </form>
     </div>

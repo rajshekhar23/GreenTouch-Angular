@@ -23,7 +23,6 @@ export class ListPaintCategoryItemsComponent implements OnInit {
         result.forEach(function (res, index) {
           res['imgUrl'] = '../../../assets/images/' + (index + 1) + '.jpg';
         })
-        console.log(result);
         this._productsByCategory = result
       },
       error => console.log('Error :: ' + error))
@@ -31,8 +30,8 @@ export class ListPaintCategoryItemsComponent implements OnInit {
 
   ngOnInit() {
     this.sub = this._activatedRoute.params.subscribe(params => {
-      console.log(params);
       this.id = params['categoryId'];
+      this.getProductDetailsByCategoryId(this.id);
     })
     this.getProductDetailsByCategoryId(this.id);
   }

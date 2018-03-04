@@ -1,38 +1,17 @@
-<div class="container" style='margin: 100px auto;'>
-  <div class="row">
-    <div id="Carousel" class="carousel slide" data-interval="2000" data-ride=carousel>
-      <div class="carousel-inner">
-
-        <div class="item active">
-          <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 products" *ngFor="let product of _allProductCategories">
-              <div class="hovereffect">
-                <img class="img-responsive" src="{{product.imgUrl}}" alt="">
-                <div class="overlay">
-                  <h2>{{product.c_name}}</h2>
-                  <p>
-                    <a [routerLink]="['/paintcategorylist', product.c_id]">View Details</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 products">
-              <div class="hovereffect">
-                <img class="img-responsive" src="http://placehold.it/350x250" alt="">
-                <div class="overlay">
-                  <h2>All Products</h2>
-                  <p>
-                    <a href="#">View All</a>
-                  </p>
-                </div>
-              </div>
-            </div>
+<section>
+  <div class="container" style='margin: 100px auto;'>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 products" *ngFor="let product of _allProductCategories">
+        <div class="hovereffect">
+          <img class="img-responsive" src="{{product.imgUrl}}" alt="">
+          <div class="overlay">
+            <h2>{{product.c_name}}</h2>
+            <p>
+              <a [routerLink]="['/paintcategorylist', product.c_id]">View Details</a>
+            </p>
           </div>
-          <!--.row-->
         </div>
-        <!--.item-->
       </div>
     </div>
-    <!--.container-->
   </div>
-</div>
+</section>

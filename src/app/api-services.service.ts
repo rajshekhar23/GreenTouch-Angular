@@ -13,7 +13,7 @@ export class ApiServicesService {
   private _allProductsIfNotCategoryId = 'http://localhost/neelu/allProducts.php';
   private _qualityUrl = 'http://localhost/neelu/quality.php';
   private _policyAndTerms = 'http://localhost/neelu/policyTerm.php';
-
+  private _searchCategoryUrl = 'http://localhost/neelu/search.php?catsearch=';
   constructor(private _http: Http) { }
 
   getAllProductCategories(): Observable<IProductCategories[]> {
@@ -25,10 +25,8 @@ export class ApiServicesService {
 
   getProductDetailsByCategoryId(categoryId): Observable<IProductByCategory[]> {
     const URL = categoryId ? this._productDetailsByCategoryIdUrl + categoryId : this._allProductsIfNotCategoryId;
-    console.log(URL);
     return this._http.get(URL)
       .map((response: Response) => {
-        console.log('Response :: ', response.json());
         return <IProductByCategory[]>response.json();
       }).catch(this.handleError);
   }
@@ -44,6 +42,15 @@ export class ApiServicesService {
     return this._http.get(this._policyAndTerms)
       .map((response: Response) => {
         return response.json();
+      }).catch(this.handleError);
+  }
+
+  search_word(data) {
+    return this._http.get(this._searchCategoryUrl + data)
+      .map((response: Response) => {
+        return response.json().map(item => {
+          return item
+        })
       }).catch(this.handleError);
   }
 
