@@ -385,3 +385,10 @@ hr {
     padding-right: 10px;
     font-size: 15px;
 }
+
+.customLabel{
+    width:100%;
+    margin:10px auto;
+    background-color:#525756;
+    color: #fff;
+}

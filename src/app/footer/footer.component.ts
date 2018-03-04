@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent implements OnInit {
   _allProductCategories: IProductCategories[];
+  _contactDetails: any;
 
   constructor(private _apiService: ApiServicesService, private _router: Router) { }
 
@@ -25,8 +26,17 @@ export class FooterComponent implements OnInit {
       error => console.log('Error :: ' + error))
   }
 
+  getContactDetails(): void {
+    this._apiService.getContactDetails()
+      .subscribe(result => {
+        this._contactDetails = result
+      },
+      error => console.log('Error :: ' + error))
+  }
+
   ngOnInit() {
     this.getAllProductCategories();
+    this.getContactDetails();
   }
 
 }

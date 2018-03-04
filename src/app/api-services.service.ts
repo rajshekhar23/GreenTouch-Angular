@@ -14,6 +14,9 @@ export class ApiServicesService {
   private _qualityUrl = 'http://localhost/neelu/quality.php';
   private _policyAndTerms = 'http://localhost/neelu/policyTerm.php';
   private _searchCategoryUrl = 'http://localhost/neelu/search.php?catsearch=';
+  private enquiryUrl = 'http://localhost/neelu/contact.php?';
+  private _contactDetailsUrl = 'http://localhost/neelu/contactUs.php';
+
   constructor(private _http: Http) { }
 
   getAllProductCategories(): Observable<IProductCategories[]> {
@@ -57,6 +60,20 @@ export class ApiServicesService {
   handleError(error: Response) {
     console.log('From Error ', error);
     return Observable.throw(error.statusText);
+  }
+
+  contactUs(body) {
+    return this._http.get(this.enquiryUrl + body)
+      .map((response: Response) => {
+        return response.json();
+      }).catch(this.handleError);
+  }
+
+  getContactDetails() {
+    return this._http.get(this._contactDetailsUrl)
+      .map((response: Response) => {
+        return response.json();
+      }).catch(this.handleError);
   }
 
 }

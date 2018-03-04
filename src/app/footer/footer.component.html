@@ -40,7 +40,15 @@
           </h3>
           <div class="input-group input-group-md">
             <p class='contactDetails'>
-              Gopal Industrial Enterprises J-290, Near Indrayani Nagar, Bhosari, MIDC Pune: 411026 Call: 8698211118
+              <span *ngFor="let contactField of _contactDetails">
+                {{contactField.name}},<br/>
+                {{contactField.street}}, 
+                {{contactField.city}}
+                {{contactField.zip}}
+                {{contactField.state}}
+                {{contactField.country}}.
+                {{contactField.phone}}
+              </span>
             </p>
           </div>
         </nav>
