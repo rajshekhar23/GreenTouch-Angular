@@ -18,7 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductPortfolioComponent } from './product-portfolio/product-portfolio.component';
 import { ProductBrochureComponent } from './product-brochure/product-brochure.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@angular/common';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,7 @@ import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@a
     })
   ],
   providers: [{
-    provide: LocationStrategy, useClass: PathLocationStrategy
+    provide: LocationStrategy, useClass: HashLocationStrategy
   }],
   bootstrap: [AppComponent],
   exports: [],
