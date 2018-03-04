@@ -16,6 +16,7 @@ export class ApiServicesService {
   private _searchCategoryUrl = 'http://localhost/neelu/search.php?catsearch=';
   private enquiryUrl = 'http://localhost/neelu/contact.php?';
   private _contactDetailsUrl = 'http://localhost/neelu/contactUs.php';
+  private _aboutUsUrl = 'http://localhost/neelu/aboutUs.php';
 
   constructor(private _http: Http) { }
 
@@ -37,6 +38,14 @@ export class ApiServicesService {
   getQuality() {
     return this._http.get(this._qualityUrl)
       .map((response: Response) => {
+        return response.json();
+      }).catch(this.handleError);
+  }
+
+  getAboutUsDetails() {
+    return this._http.get(this._aboutUsUrl)
+      .map((response: Response) => {
+        console.log(response);
         return response.json();
       }).catch(this.handleError);
   }

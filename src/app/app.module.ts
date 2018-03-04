@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductPortfolioComponent } from './product-portfolio/product-portfolio.component';
 import { ProductBrochureComponent } from './product-brochure/product-brochure.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       apiKey: 'AIzaSyBZib4Lvp0g1L8eskVBFJ0SEbnENB6cJ-g'
     })
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy, useClass: PathLocationStrategy
+  }],
   bootstrap: [AppComponent],
   exports: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

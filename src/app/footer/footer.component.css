@@ -9,7 +9,6 @@
 }
 
 .footer ul li a {
-    margin-bottom: 10px;
     font-size: 18px;
     font-weight: bold;
     height: 25px;
@@ -27,7 +26,7 @@
 }
 
 .footer2 .footer {
-    padding: 35px 0;
+    padding: 25px 0;
     background: rgba(145, 238, 226, 1);
     background: -moz-linear-gradient(left, rgba(145, 238, 226, 1) 0%, rgba(145, 238, 226, 1) 22%, rgba(145, 238, 226, 1) 31%, rgba(145, 238, 226, 1) 39%, rgba(57, 196, 182, 1) 71%, rgba(57, 196, 182, 1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(145, 238, 226, 1)), color-stop(22%, rgba(145, 238, 226, 1)), color-stop(31%, rgba(145, 238, 226, 1)), color-stop(39%, rgba(145, 238, 226, 1)), color-stop(71%, rgba(57, 196, 182, 1)), color-stop(100%, rgba(57, 196, 182, 1)));
@@ -39,7 +38,7 @@
 }
 
 .footer2 .footer nav h3 {
-    font-size: 18px;
+    font-size: 14px;
     color: #FFF;
     font-weight: bold;
     text-transform: uppercase;
@@ -54,8 +53,7 @@
 .footer2 .footer nav ul li a {
     text-decoration: none;
     display: inline-block;
-    padding: 4px 16px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .footer2 .footer .input-group {
@@ -137,12 +135,6 @@
 @media (max-width: 767px) {
     .footer2 .footer {
         text-align: center;
-    }
-}
-
-@media (max-width: 991px) {
-    .footer2 .footer ul {
-        margin-bottom: 30px;
     }
 }
 
