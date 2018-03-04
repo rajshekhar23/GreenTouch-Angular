@@ -8,15 +8,15 @@ import { IProductByCategory } from './model/IProductsByCategory';
 @Injectable()
 export class ApiServicesService {
 
-  private _allProductCategoriesUrl = 'http://localhost/neelu/allCategory.php';
-  private _productDetailsByCategoryIdUrl = 'http://localhost/neelu/product.php?categoryId=';
-  private _allProductsIfNotCategoryId = 'http://localhost/neelu/allProducts.php';
-  private _qualityUrl = 'http://localhost/neelu/quality.php';
-  private _policyAndTerms = 'http://localhost/neelu/policyTerm.php';
-  private _searchCategoryUrl = 'http://localhost/neelu/search.php?catsearch=';
-  private enquiryUrl = 'http://localhost/neelu/contact.php?';
-  private _contactDetailsUrl = 'http://localhost/neelu/contactUs.php';
-  private _aboutUsUrl = 'http://localhost/neelu/aboutUs.php';
+  private _allProductCategoriesUrl = 'https://crossorigin.me/http://www.greentouchpaints.com/neelu/allCategory.php';
+  private _productDetailsByCategoryIdUrl = 'https://crossorigin.me/http://www.greentouchpaints.com/neelu/product.php?categoryId=';
+  private _allProductsIfNotCategoryId = 'https://crossorigin.me/http://www.greentouchpaints.com/neelu/allProducts.php';
+  private _qualityUrl = 'http://www.greentouchpaints.com/neelu/quality.php';
+  private _policyAndTerms = 'http://www.greentouchpaints.com/neelu/policyTerm.php';
+  private _searchCategoryUrl = 'http://www.greentouchpaints.com/neelu/search.php?catsearch=';
+  private enquiryUrl = 'http://www.greentouchpaints.com/neelu/contact.php?';
+  private _contactDetailsUrl = 'https://crossorigin.me/http://www.greentouchpaints.com/neelu/contactUs.php';
+  private _aboutUsUrl = 'http://www.greentouchpaints.com/neelu/aboutUs.php';
 
   constructor(private _http: Http) { }
 
