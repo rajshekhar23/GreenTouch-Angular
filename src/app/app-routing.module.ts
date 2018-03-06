@@ -9,6 +9,7 @@ import { PolicyTermsComponent } from './policy-terms/policy-terms.component';
 import { QualityComponent } from './quality/quality.component';
 import { ProductPortfolioComponent } from './product-portfolio/product-portfolio.component';
 import { ProductBrochureComponent } from './product-brochure/product-brochure.component';
+import { SiteMapComponent } from './site-map/site-map.component';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -51,6 +52,10 @@ import { ProductBrochureComponent } from './product-brochure/product-brochure.co
     {
       path: 'product-brochure',
       component: ProductBrochureComponent
+    },
+    {
+      path: 'site-map',
+      component: SiteMapComponent
     }
   ])],
   exports: [RouterModule],

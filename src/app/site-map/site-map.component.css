@@ -1,0 +1,33 @@
+.siteMapWrapper {
+    margin: 80px auto;
+}
+.panel {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.panel-heading {
+    padding: 2px 15px;
+}
+
+.panel-body{
+    padding: 0px;
+}
+.panel-body li {
+    margin: 20px 20px;
+}
+
+.panel-body a {
+    color: darkslateblue;
+    margin-top: -10px;
+    text-decoration: none;
+}
+
+.panel-body a:hover {
+    text-transform: uppercase;
+}
+
+.panel-body .fa.fa-angle-double-right {
+    font-size: 20px;
+    color: darkslateblue;
+}

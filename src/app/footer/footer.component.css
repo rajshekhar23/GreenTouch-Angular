@@ -8,10 +8,12 @@
     margin-left: -38px;
 }
 
+.footer ul li{
+    margin-bottom:5px;
+}
 .footer ul li a {
     font-size: 18px;
     font-weight: bold;
-    height: 25px;
 }
 
 .footer ul a:hover {
@@ -26,7 +28,7 @@
 }
 
 .footer2 .footer {
-    padding: 25px 0;
+    padding: 15px 0;
     background: rgba(145, 238, 226, 1);
     background: -moz-linear-gradient(left, rgba(145, 238, 226, 1) 0%, rgba(145, 238, 226, 1) 22%, rgba(145, 238, 226, 1) 31%, rgba(145, 238, 226, 1) 39%, rgba(57, 196, 182, 1) 71%, rgba(57, 196, 182, 1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(145, 238, 226, 1)), color-stop(22%, rgba(145, 238, 226, 1)), color-stop(31%, rgba(145, 238, 226, 1)), color-stop(39%, rgba(145, 238, 226, 1)), color-stop(71%, rgba(57, 196, 182, 1)), color-stop(100%, rgba(57, 196, 182, 1)));
@@ -42,7 +44,8 @@
     color: #FFF;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 0 0 1em 0;
+    padding: 0 0 10px 0;
+    margin:0 0 0em 0;
 }
 
 .footer2 .footer nav h3 span {
@@ -53,7 +56,7 @@
 .footer2 .footer nav ul li a {
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .footer2 .footer .input-group {
@@ -139,9 +142,9 @@
 }
 
 .contactDetails {
-    padding: 6px 10px;
     color: #fff;
     font-size: 16px;
+    line-height: 22px;
     margin: auto;
 }
 
@@ -165,7 +168,10 @@
     }
 }
 
-.footer2 {}
-
+.fa-phone::before{
+    margin-right: 8px;
+    font-size: 20px;
+    color:#3A4144;
+}
 
 /* End Footer*/

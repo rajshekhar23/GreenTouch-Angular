@@ -1,19 +1,18 @@
 <div class="container" style="margin:100px auto;">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        Panel Primary</h3>
-                </div>
-                <ul class="list-group">
-                    <a href="#" class="list-group-item">Cras justo odio</a>
-                    <a href="http://www.jquery2dotnet.com/2014/01/jquery-export-table-data-into-ms-excel.html" class="list-group-item active">Dapibus ac facilisis in</a>
-                    <a href="#" class="list-group-item">Morbi leo risus</a>
-                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                    <a href="#" class="list-group-item">Vestibulum at eros</a>
-                </ul>
-            </div>
+    <h3>Product Category :</h3><br/>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let prodCad of _allProductByCategory;let i = index">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            {{prodCad[i].prod_group_name}}</h3>
         </div>
+        <ul class="list-group">
+          <a *ngFor="let product of _allProductByCategory[i]" class="list-group-item">
+              {{product.prod_name}}
+          </a>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>

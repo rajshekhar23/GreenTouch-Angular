@@ -48,7 +48,7 @@
               </a>
             </li>
             <li>
-              <a routerLink='/product-brochure' class="[ animate ]">Product Brochure
+              <a routerLink='/product-brochure' class="[ animate ]">Company Brochure
               </a>
             </li>
             <li>
@@ -56,6 +56,10 @@
             </li>
             <li>
               <a routerLink="/quality" class="[ animate ]">Quality
+              </a>
+            </li>
+            <li>
+              <a routerLink="/site-map" class="[ animate ]">Site Map
               </a>
             </li>
           </ul>
@@ -94,8 +98,7 @@
           </span>
         </div>
         <div class='searchResult' *ngIf='searchResult'>
-          <a *ngFor="let item of searchResult" class='seachResultItems' [routerLink]="['/paintcategorylist', item.cat_id]"
-            (click)="isOpened = !isOpened">{{item.cat_name}}</a>
+          <a *ngFor="let item of searchResult" class='seachResultItems' [routerLink]="['/paintcategorylist', item.cat_id]" (click)="isOpened = !isOpened">{{item.cat_name}}</a>
         </div>
       </form>
     </div>

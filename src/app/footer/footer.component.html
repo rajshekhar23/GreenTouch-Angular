@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="container">
       <div class="row">
-        <nav class="col-md-4 col-sm-4">
+        <nav class="col-md-offset-1 col-md-3 col-sm-4">
           <h3>Our Company
           </h3>
           <ul>
@@ -19,11 +19,14 @@
               <a routerLink="/quality">Quality</a>
             </li>
             <li>
-              <a routerLink='/product-brochure'>Product Brochure</a>
+              <a routerLink='/product-brochure'>Company Brochure</a>
+            </li>
+            <li>
+              <a routerLink='/site-map'>Site Map</a>
             </li>
           </ul>
         </nav>
-        <nav class="col-md-4 col-sm-4">
+        <nav class="col-md-3 col-sm-4">
           <h3>Product Range
           </h3>
           <ul>
@@ -32,27 +35,22 @@
             </li>
           </ul>
         </nav>
-        <nav class="col-md-4 col-sm-4">
-        </nav>
 
         <nav class="col-md-3 col-sm-4 col-xs-12">
           <h3>Green-Touch
           </h3>
-          <div class="input-group input-group-md">
-            <p class='contactDetails'>
-              <span *ngFor="let contactField of _contactDetails">
-                {{contactField.name}},<br/>
-                {{contactField.street}}, 
-                {{contactField.city}}
-                {{contactField.zip}}
-                {{contactField.state}}
-                {{contactField.country}}.
-                {{contactField.phone}}
-              </span>
-            </p>
-          </div>
+          <p class='contactDetails'>
+            <span *ngFor="let contactField of _contactDetails">
+              {{contactField.name}},
+              <br/> {{contactField.street}},
+               {{contactField.city}} 
+               {{contactField.zip}} 
+               {{contactField.state}} India.
+               <br/><i class="fa fa-phone"> +91 {{contactField.phone}}</i>
+            </span>
+          </p>
         </nav>
-
+        <nav class="col-md-offset-1"></nav>
       </div>
       <!--/.row-->
     </div>
@@ -62,7 +60,7 @@
 
   <div class="footer-bottom">
     <div class="container">
-      <div class="pull-right"> Copyright © Green-Touch Pvt Ltd. 2018. All right reserved.</div>
+      <div class="pull-right"> Copyright © B2bharat.com, All right reserved.</div>
       <div class="pull-right" style='display:none;'>
         <ul style="margin:0;">
           <li>

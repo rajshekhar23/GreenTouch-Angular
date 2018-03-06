@@ -19,6 +19,9 @@ import { ProductPortfolioComponent } from './product-portfolio/product-portfolio
 import { ProductBrochureComponent } from './product-brochure/product-brochure.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { NumberDirective } from './number.directive';
+import { CharacterDirective } from './character.directive';
+import { SiteMapComponent } from './site-map/site-map.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     HeaderComponent,
     FooterComponent,
     ProductPortfolioComponent,
-    ProductBrochureComponent
+    ProductBrochureComponent,
+    NumberDirective,
+    CharacterDirective,
+    SiteMapComponent
   ],
   imports: [
     AppRoutingModule,
