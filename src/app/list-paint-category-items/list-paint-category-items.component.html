@@ -1,7 +1,10 @@
 <div class="container" style="margin-top:40px;">
   <h3>All Products</h3>
-  <div id="products" class="row list-group">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 products" *ngFor="let product of _productsByCategory">
+  <div>
+      {{_productCategoryDesc}}
+    </div><br/>
+  <div id="products" class="row list-group" *ngFor="let product of _productsByCategory">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 products">
       <div class="hovereffect">
         <img class="img-responsive" src="{{product.imgUrl}}" alt="">
         <div class="overlay">
@@ -9,9 +12,13 @@
           <p>
             <a routerLink='/contactus'>I'm Interested</a>
           </p>
+          <p class='prodUnitPrice'>{{product.p_unit_price}}</p>
         </div>
       </div>
     </div>
-    <h4 *ngIf="!_productsByCategory?.length" class="text-center">No products available for selected category</h4>
+    <div class='col-md-8'>
+      {{product.p_prod_briefdes}}
+    </div>
   </div>
+  <h4 *ngIf="!_productsByCategory?.length" class="text-center">No products available for selected category</h4>
 </div>

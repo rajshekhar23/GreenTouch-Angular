@@ -13,6 +13,7 @@ export class ListPaintCategoryItemsComponent implements OnInit {
   id: number;
   private sub: any;
   _productsByCategory: IProductByCategory[];
+  _productCategoryDesc:any;
   constructor(private _apiService: ApiServicesService,
     private _activatedRoute: ActivatedRoute) {
   }
@@ -21,9 +22,10 @@ export class ListPaintCategoryItemsComponent implements OnInit {
     this._apiService.getProductDetailsByCategoryId(id)
       .subscribe(result => {
         result.forEach(function (res, index) {
-          res['imgUrl'] = '../../../assets/images/' + (index + 1) + '.jpg';
+          res['imgUrl'] = 'https://www.b2bharat.com/uploads/product/1000x600/' + res.p_photo1;
         })
-        this._productsByCategory = result
+        this._productsByCategory = result;
+        this._productCategoryDesc = result['prod_gdes'];
       },
       error => console.log('Error :: ' + error))
   }

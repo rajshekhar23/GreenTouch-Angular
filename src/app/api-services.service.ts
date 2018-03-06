@@ -8,16 +8,19 @@ import { IProductByCategory } from './model/IProductsByCategory';
 @Injectable()
 export class ApiServicesService {
 
-  private _allProductCategoriesUrl = 'http://localhost/neelu/allCategory.php';
-  private _productDetailsByCategoryIdUrl = 'http://localhost/neelu/product.php?categoryId=';
-  private _allProductsIfNotCategoryId = 'http://localhost/neelu/allProducts.php';
-  private _qualityUrl = 'http://localhost/neelu/quality.php';
-  private _policyAndTerms = 'http://localhost/neelu/policyTerm.php';
-  private _searchCategoryUrl = 'http://localhost/neelu/search.php?catsearch=';
-  private enquiryUrl = 'http://localhost/neelu/contact.php?';
-  private _contactDetailsUrl = 'http://localhost/neelu/contactUs.php';
-  private _aboutUsUrl = 'http://localhost/neelu/aboutUs.php';
-  private _productsWithGroupCategory = 'http://localhost/neelu/productsWithGroupCategoey.php';
+  pathApi: string = 'https://crossorigin.me/http://www.greentouchpaints.com/';
+  pathLocalApi: string = 'http://localhost/';
+
+  private _allProductCategoriesUrl = this.pathApi + 'neelu/allCategory.php';
+  private _productDetailsByCategoryIdUrl = this.pathApi + 'neelu/product.php?categoryId=';
+  private _allProductsIfNotCategoryId = this.pathApi + 'neelu/allProducts.php';
+  private _qualityUrl = this.pathApi + 'neelu/quality.php';
+  private _policyAndTerms = this.pathApi + 'neelu/policyTerm.php';
+  private _searchCategoryUrl = this.pathApi + 'neelu/search.php?catsearch=';
+  private enquiryUrl = this.pathApi + 'neelu/contact.php?';
+  private _contactDetailsUrl = this.pathApi + 'neelu/contactUs.php';
+  private _aboutUsUrl = this.pathApi + 'neelu/aboutUs.php';
+  private _productsWithGroupCategory = this.pathApi + 'neelu/productsWithGroupCategoey.php';
 
   constructor(private _http: Http) { }
 
@@ -32,14 +35,11 @@ export class ApiServicesService {
               return event.prod_group == group;
             }));
           });
-          resolve(res); 
+          resolve(res);
         });
     });
     return promise;
-/*     return this._http.get(this._productsWithGroupCategory)
-      .map((response: Response) => {
-      }).catch(this.handleError);
- */  }
+  }
 
   getAllProductCategories(): Observable<IProductCategories[]> {
     return this._http.get(this._allProductCategoriesUrl)
@@ -50,9 +50,9 @@ export class ApiServicesService {
 
   getProductDetailsByCategoryId(categoryId): Observable<IProductByCategory[]> {
     const URL = categoryId ? this._productDetailsByCategoryIdUrl + categoryId : this._allProductsIfNotCategoryId;
-    console.log(URL);
     return this._http.get(URL)
       .map((response: Response) => {
+        console.log(response);
         return <IProductByCategory[]>response.json();
       }).catch(this.handleError);
   }
