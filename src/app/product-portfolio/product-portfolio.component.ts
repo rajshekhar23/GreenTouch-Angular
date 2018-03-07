@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ApiServicesService } from '../api-services.service';
 import 'rxjs/Rx';
-
+import {Observable} from 'rxjs/Rx';
 @Component({
   selector: 'app-product-portfolio',
   templateUrl: './product-portfolio.component.html',
@@ -12,7 +12,6 @@ import 'rxjs/Rx';
 export class ProductPortfolioComponent implements OnInit {
   public _allProductByCategory: any;
   constructor(private _api: ApiServicesService) {
-    //    this.set = new Set();
   }
 
   ngOnInit() {

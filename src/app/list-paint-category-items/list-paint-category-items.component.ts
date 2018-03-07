@@ -26,6 +26,7 @@ export class ListPaintCategoryItemsComponent implements OnInit {
         })
         this._productsByCategory = result;
         this._productCategoryDesc = result['prod_gdes'];
+        console.log(this._productsByCategory);
       },
       error => console.log('Error :: ' + error))
   }

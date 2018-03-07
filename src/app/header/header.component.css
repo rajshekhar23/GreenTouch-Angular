@@ -1,5 +1,7 @@
 /*start navbar */
-
+.customContainer{
+    padding: 0px;
+}
 .animate {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -167,8 +169,6 @@
 @media screen and (min-width: 768px) {
     .navbar-bootsnipp .navbar-brand {
         font-size: 20px;
-        height: auto;
-        padding: 15px 5px;
     }
     .navbar-bootsnipp .navbar-nav>li>a {
         font-size: 16px;
@@ -222,8 +222,18 @@
     margin-top: 0;
 }
 
-.isTransparant {
-/*     background-color: transparent !important; */
+.navbar-brand {
+    padding: 0px;
+    margin-left: 0px;
+}
+
+.navbar-brand>img {
+    height: 60px;
+    width: auto;
+}
+
+.navbar-right {
+    margin-top: 10px;
 }
 
 

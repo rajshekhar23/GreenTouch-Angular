@@ -1,3 +1,8 @@
+.listProductsWrapper {
+    margin-top: 70px;
+    min-height: 400px;
+}
+
 .glyphicon {
     margin-right: 5px;
 }
@@ -79,7 +84,8 @@
     position: relative;
     text-align: center;
     cursor: default;
-    background: #42b078;
+    background: #4F9BE5;
+    border:1px solid gray;
 }
 
 .hovereffect .overlay {
@@ -183,7 +189,19 @@
     float: right;
 }
 
+.productDetails{
+    border:1px solid gray;
+    min-height: 200px;
+}
 
+.productDetails .productPriceDetails {    
+    color: #4F9BE5;
+    width:100%;
+    font-size: 22px;
+}
+.productDetails .productPriceDetails b{
+    margin:10px auto;
+}
 /*
     end product Category
 */

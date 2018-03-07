@@ -1,15 +1,16 @@
 <div class="container" style="margin:100px auto;">
-    <h3>Product Category :</h3><br/>
+  <h3>Product Category :</h3>
+  <br/>
   <div class="row">
-    <div class="col-md-4" *ngFor="let prodCad of _allProductByCategory;let i = index">
+    <div class="col-md-4" *ngFor="let prodCad of _allProductByCategory;let i=index;">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">
-            {{prodCad[i].prod_group_name}}</h3>
+            {{prodCad[0].prod_group_name}}</h3>
         </div>
         <ul class="list-group">
           <a *ngFor="let product of _allProductByCategory[i]" class="list-group-item">
-              {{product.prod_name}}
+            {{product.prod_name}}
           </a>
         </ul>
       </div>

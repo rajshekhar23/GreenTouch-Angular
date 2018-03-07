@@ -29,6 +29,7 @@ export class ApiServicesService {
       let res = [];
       this._http.get(this._productsWithGroupCategory)
         .toPromise().then(response => {
+          console.log("product portfolio ", response);
           let set = new Set(response.json().map(item => item.prod_group));
           set.forEach(function (group) {
             res.push(response.json().filter(function (event) {
@@ -44,15 +45,17 @@ export class ApiServicesService {
   getAllProductCategories(): Observable<IProductCategories[]> {
     return this._http.get(this._allProductCategoriesUrl)
       .map((response: Response) => {
+        console.log("All Products ", response);
         return <IProductCategories[]>response.json();
       }).catch(this.handleError);
   }
 
   getProductDetailsByCategoryId(categoryId): Observable<IProductByCategory[]> {
-    const URL = categoryId ? this._productDetailsByCategoryIdUrl + categoryId : this._allProductsIfNotCategoryId;
-    return this._http.get(URL)
+    const url = categoryId ? this._productDetailsByCategoryIdUrl + categoryId : this._allProductsIfNotCategoryId;
+    console.log(url);
+    return this._http.get(url)
       .map((response: Response) => {
-        console.log(response);
+        console.log("Products By Category ", response);
         return <IProductByCategory[]>response.json();
       }).catch(this.handleError);
   }
