@@ -22,7 +22,7 @@
               <a routerLink='/product-brochure'>Company Brochure</a>
             </li>
             <li>
-              <a routerLink='/site-map'>Site Map</a>
+              <a routerLink='/site-map'>Site map</a>
             </li>
           </ul>
         </nav>
@@ -30,8 +30,11 @@
           <h3>Product Range
           </h3>
           <ul>
-            <li *ngFor='let product of _allProductCategories'>
+            <li *ngFor='let product of _allProductCategories | slice:0:5'>
               <a [routerLink]="['/paintcategorylist', product.c_id]">{{product.c_name}}</a>
+            </li>
+            <li>
+              <a routerLink='/paintcategorylist'>View All</a>
             </li>
           </ul>
         </nav>
@@ -42,11 +45,9 @@
           <p class='contactDetails'>
             <span *ngFor="let contactField of _contactDetails">
               {{contactField.name}},
-              <br/> {{contactField.street}},
-               {{contactField.city}} 
-               {{contactField.zip}} 
-               {{contactField.state}} India.
-               <br/><i class="fa fa-phone"> +91 {{contactField.phone}}</i>
+              <br/> {{contactField.street}}, {{contactField.city}} {{contactField.zip}} {{contactField.state}} India.
+              <br/>
+              <i class="fa fa-phone"> +91 {{contactField.phone}}</i>
             </span>
           </p>
         </nav>

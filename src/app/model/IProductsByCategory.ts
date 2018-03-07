@@ -7,4 +7,5 @@ export interface IProductByCategory {
     p_product_name: string;
     p_unit_price: string;
     p_user_id: string;
+    photo1:string;
 }

@@ -8,16 +8,17 @@
     margin-left: -38px;
 }
 
-.footer ul li{
-    margin-bottom:5px;
+.footer ul li {
+    margin-bottom: 5px;
 }
+
 .footer ul li a {
     font-size: 18px;
     font-weight: bold;
 }
 
 .footer ul a:hover {
-    color:dimgrey;
+    color: dimgrey;
     text-transform: uppercase;
 }
 
@@ -41,11 +42,11 @@
 
 .footer2 .footer nav h3 {
     font-size: 14px;
-    color: #FFF;
+    color: #3A4144;
     font-weight: bold;
     text-transform: uppercase;
     padding: 0 0 10px 0;
-    margin:0 0 0em 0;
+    margin: 0 0 0em 0;
 }
 
 .footer2 .footer nav h3 span {
@@ -168,10 +169,11 @@
     }
 }
 
-.fa-phone::before{
+.fa-phone::before {
     margin-right: 8px;
     font-size: 20px;
-    color:#3A4144;
+    color: #3A4144;
 }
+
 
 /* End Footer*/

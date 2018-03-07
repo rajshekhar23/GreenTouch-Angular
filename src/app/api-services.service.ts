@@ -50,13 +50,13 @@ export class ApiServicesService {
       }).catch(this.handleError);
   }
 
-  getProductDetailsByCategoryId(categoryId): Observable<IProductByCategory[]> {
+  getProductDetailsByCategoryId(categoryId) {
     const url = categoryId ? this._productDetailsByCategoryIdUrl + categoryId : this._allProductsIfNotCategoryId;
     console.log(url);
     return this._http.get(url)
       .map((response: Response) => {
         console.log("Products By Category ", response);
-        return <IProductByCategory[]>response.json();
+        return response.json();
       }).catch(this.handleError);
   }
 

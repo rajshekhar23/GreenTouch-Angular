@@ -34,6 +34,10 @@ import { SiteMapComponent } from './site-map/site-map.component';
       component: ListPaintCategoryItemsComponent
     },
     {
+      path: 'paintcategorylist',
+      component: ListPaintCategoryItemsComponent
+    },
+    {
       path: 'productsrange',
       component: ProductsRangeComponent
     },

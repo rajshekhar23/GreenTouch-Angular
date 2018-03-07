@@ -22,6 +22,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { NumberDirective } from './number.directive';
 import { CharacterDirective } from './character.directive';
 import { SiteMapComponent } from './site-map/site-map.component';
+import { AllProductsGridComponent } from './all-products-grid/all-products-grid.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SiteMapComponent } from './site-map/site-map.component';
     ProductBrochureComponent,
     NumberDirective,
     CharacterDirective,
-    SiteMapComponent
+    SiteMapComponent,
+    AllProductsGridComponent
   ],
   imports: [
     AppRoutingModule,

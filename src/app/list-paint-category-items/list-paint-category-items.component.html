@@ -1,26 +1,30 @@
 <div class="container listProductsWrapper">
-  <div>
-    {{_productCategoryDesc}}
-  </div>
-  <br/>
   <div id="products" class="row list-group" *ngFor="let product of _productsByCategory">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 productCategoryDescriptionWrapper">
+      <p class='productPriceDetails'>
+        <b>Product Category : {{product.cat_name}}</b>
+      </p>
+      {{product.prod_gdes}}
+    </div>
     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 products">
       <div class="hovereffect">
         <img class="img-responsive" src="{{product.imgUrl}}" alt="">
         <div class="overlay">
-          <h2>{{product.cat_name}}</h2>
+          <h2>{{product.prod_name}}</h2>
           <p>
             <a routerLink='/contactus'>I'm Interested</a>
           </p>
-          <p class='prodUnitPrice'>Approx : {{product.p_unit_price}} / {{product.p_unit}}</p>
+          <p class='prodUnitPrice'>Approx : {{product.unit_price}} / {{product.unit_price_unit}}</p>
         </div>
       </div>
     </div>
-    <div class='col-md-8 productDetails'>
-      <p class='productPriceDetails'>
-        <b>Appox: {{product.p_unit_price}} / {{product.p_unit}}</b>
+    <div class='col-md-9 productDetails'>
+      <p class='productPriceDetails clearfix'>
+        <b class='pull-left'>Product Name : {{product.prod_name}}</b>
+        <b class='pull-right'>
+            Appox: {{product.unit_price}} / {{product.unit_price_unit}} &nbsp;&nbsp;<a routerLink='/contactus' class='iAmInterested'>I'm Interested</a></b>
       </p>
-      {{product.p_prod_briefdes}}
+      {{product.prod_briefdes}}
     </div>
   </div>
   <h4 *ngIf="!_productsByCategory?.length" class="text-center">No products available for selected category</h4>

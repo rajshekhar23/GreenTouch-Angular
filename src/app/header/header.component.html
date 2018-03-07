@@ -69,8 +69,11 @@
             <span class="[ caret ]"></span>
           </a>
           <ul class="[ dropdown-menu ]" role="menu">
-            <li *ngFor='let product of _allProductCategories'>
+            <li *ngFor='let product of _allProductCategories | slice:0:5'>
               <a [routerLink]="['/paintcategorylist', product.c_id]">{{product.c_name}}</a>
+            </li>
+            <li>
+                <a routerLink='/paintcategorylist'>View All</a>
             </li>
           </ul>
         </li>
