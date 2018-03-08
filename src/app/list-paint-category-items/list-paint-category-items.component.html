@@ -22,10 +22,14 @@
       <p class='productPriceDetails clearfix'>
         <b class='pull-left'>Product Name : {{product.prod_name}}</b>
         <b class='pull-right'>
-            Appox: {{product.unit_price}} / {{product.unit_price_unit}} &nbsp;&nbsp;<a routerLink='/contactus' class='iAmInterested'>I'm Interested</a></b>
+          Appox: {{product.unit_price}} / {{product.unit_price_unit}} &nbsp;&nbsp;
+          <a routerLink='/contactus' class='iAmInterested'>I'm Interested</a>
+        </b>
       </p>
       {{product.prod_briefdes}}
     </div>
   </div>
-  <h4 *ngIf="!_productsByCategory?.length" class="text-center">No products available for selected category</h4>
+  <h4 *ngIf="!_productsByCategory?.length" class="text-center">
+    <img  class='loader' src="../../../assets/images/loader.gif" />
+  </h4>
 </div>

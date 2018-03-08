@@ -14,5 +14,7 @@
     </div>
   </div>
   <a routerLink='/paintcategorylist' class='pull-right showAll'>Show All</a>
-  <h4 *ngIf="!_productsByCategory?.length" class="text-center">No products available for selected category</h4>
+  <h4 *ngIf="!_productsByCategory?.length" class="text-center">
+    <img  class='loader' src="../../../assets/images/loader.gif" />
+  </h4>
 </div>

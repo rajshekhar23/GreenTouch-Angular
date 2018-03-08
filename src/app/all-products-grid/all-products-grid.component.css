@@ -216,6 +216,13 @@
     padding: 5px 10px;
 }
 
+h4 .loader {
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+}
 
 
 /*
