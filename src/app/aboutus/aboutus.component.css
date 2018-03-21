@@ -1,17 +1,22 @@
 .image-aboutus-banner {
-    background: url('1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    height: 465px;
+  background: url('1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 400px;
 }
 
 .aboutusContent {
-    padding: 0 46px;
-    border: 1px solid #ededed;
+  font-size: 18px;
+  text-align: justify;
+  padding: 28px 46px;
+  border: 1px solid #ededed;
 }
-.aboutusContent .lg-text{
-    padding-bottom:5px;
-    text-transform: uppercase;
-    border-bottom: 3px solid #0099CC;
+
+.lg-text {
+  color:#0099CC;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 5px;
+  text-transform: uppercase;
 }

@@ -1,35 +1,80 @@
 <div class="container listProductsWrapper">
-  <div id="products" class="row list-group" *ngFor="let product of _productsByCategory">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 productCategoryDescriptionWrapper">
-      <p class='productPriceDetails'>
-        <b>Product Category : {{product.cat_name}}</b>
+  <div *ngFor="let product of _productsByCategory;let index=index;">
+    <div id="products" class="row">
+      <div class='col-md-2'></div>
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 productCategoryDescriptionWrapper">
+        <p class='productCatName'>
+          <b>{{product.prod_group_name}}</b>
+        </p>
+        <p class='productCatDescription'>{{product.prod_gdes}}
       </p>
-      {{product.prod_gdes}}
+      </div>
+      <div class='col-md-2'></div>
     </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 products">
-      <div class="hovereffect">
-        <img class="img-responsive" src="{{product.imgUrl}}" alt="">
-        <div class="overlay">
-          <h2>{{product.prod_name}}</h2>
-          <p>
-            <a routerLink='/contactus'>I'm Interested</a>
-          </p>
-          <p class='prodUnitPrice'>Approx : {{product.unit_price}} / {{product.unit_price_unit}}</p>
+    <ng-template [ngIf]="showSingle">
+      <div class="row customRow">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 products">
+          <div class="hovereffect">
+            <img class="img-responsive" src="{{product.photo1}}" alt="">
+            <div class="overlay">
+              <h2>{{product.prod_name}}</h2>
+              <p>
+                <a class='iAmInterested' routerLink='/contactus'>I'm Interested</a>
+              </p>
+              <p class='prodUnitPrice'>Approx : {{product.unit_price}} / {{product.unit_price_unit}}</p>
+            </div>
+          </div>
+        </div>
+        <div class='col-md-9 productDetails'>
+          <div class='productPriceDetails'>
+            <p class='productName'>
+              <span>{{product.prod_name}}</span>
+            </p>
+            <p class='productPrice'>
+              <span class='pricelabel'>Appox: Price</span>
+              <span class='priceValue'> Rs. {{product.unit_price}} </span> /
+              <span class='pricelabel'>{{product.unit_price_unit}} </span> &nbsp;&nbsp;
+            </p>
+            <p class='productDescription' [innerHTML]='product.prod_briefdes'>
+            </p>
+            <a routerLink='/contactus' class='iAmInterested'>I'm Interested</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class='col-md-9 productDetails'>
-      <p class='productPriceDetails clearfix'>
-        <b class='pull-left'>Product Name : {{product.prod_name}}</b>
-        <b class='pull-right'>
-          Appox: {{product.unit_price}} / {{product.unit_price_unit}} &nbsp;&nbsp;
-          <a routerLink='/contactus' class='iAmInterested'>I'm Interested</a>
-        </b>
-      </p>
-      {{product.prod_briefdes}}
-    </div>
+    </ng-template>
+    <ng-template [ngIf]="!showSingle">
+      <div class="row customRow" *ngFor="let prod of product.products">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 products">
+          <div class="hovereffect">
+            <img class="img-responsive" src="{{prod.photo1}}" alt="">
+            <div class="overlay">
+              <h2>{{prod.prod_name}}</h2>
+              <p>
+                <a class='iAmInterested' routerLink='/contactus'>I'm Interested</a>
+              </p>
+              <p class='prodUnitPrice'>Approx : {{prod.unit_price}} / {{prod.unit_price_unit}}</p>
+            </div>
+          </div>
+        </div>
+        <div class='col-md-9 productDetails'>
+          <div class='productPriceDetails'>
+            <p class='productName'>
+              <span>{{prod.prod_name}}</span>
+            </p>
+            <p class='productPrice'>
+              <span class='pricelabel'>Appox: Price</span>
+              <span class='priceValue'> Rs. {{prod.unit_price}} </span> /
+              <span class='pricelabel'>{{prod.unit_price_unit}} </span> &nbsp;&nbsp;
+            </p>
+            <p class='productDescription' [innerHTML]='prod.prod_briefdes'>
+            </p>
+            <a routerLink='/contactus' class='iAmInterested'>I'm Interested</a>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <h4 *ngIf="!_productsByCategory?.length" class="text-center">
+      <img class='loader' src="../../../assets/images/loader.gif" />
+    </h4>
   </div>
-  <h4 *ngIf="!_productsByCategory?.length" class="text-center">
-    <img  class='loader' src="../../../assets/images/loader.gif" />
-  </h4>
 </div>

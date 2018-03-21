@@ -3,15 +3,19 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position:top;
-    height: 555px;
+    height: 400px;
 }
 
 .aboutusContent {
-    padding: 0 46px;
+    padding: 28px 46px;
     border: 1px solid #ededed;
+    font-size: 18px;
+    text-align: justify;
 }
-.aboutusContent .lg-text{
+
+.lg-text{
+    text-align: center;
     padding-bottom:5px;
     text-transform: uppercase;
-    border-bottom: 3px solid #0099CC;
+    color:#0099CC;
 }

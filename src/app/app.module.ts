@@ -23,7 +23,7 @@ import { NumberDirective } from './number.directive';
 import { CharacterDirective } from './character.directive';
 import { SiteMapComponent } from './site-map/site-map.component';
 import { AllProductsGridComponent } from './all-products-grid/all-products-grid.component';
-
+import { DomSanitizer } from '@angular/platform-browser';
 @NgModule({
   declarations: [
     AppComponent,

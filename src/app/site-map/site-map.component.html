@@ -4,7 +4,7 @@
       <div class="panel-heading">
         <h3> Site Map </h3>
       </div>
-      <ul class='panel-body'>
+      <ul id="tree1" class='panel-body'>
         <li>
           <i class="fa fa-angle-double-right">
             <a routerLink="/home">Home</a>
@@ -12,34 +12,49 @@
         </li>
         <li>
           <i class="fa fa-angle-double-right">
-            <a routerLink="/aboutus">About Us</a>
+            <a href="#">PROFILE</a>
           </i>
+          <ul>
+            <li>
+              <a routerLink="/aboutus" class="[ animate ]">About Us</a>
+            </li>
+            <li>
+              <a routerLink="/policy" class="[ animate ]">Infrastructure and Facilities</a>
+            </li>
+            <li>
+              <a routerLink='/productportfolio' class="[ animate ]">Awards and Testimonials </a>
+            </li>
+            <li>
+              <a routerLink="/quality" class="[ animate ]">Quality</a>
+            </li>
+          </ul>
         </li>
         <li>
           <i class="fa fa-angle-double-right">
-            <a routerLink='/productportfolio'>Product Portfolio</a>
+            <a routerLink='/paintcategorylist'>Products</a>
           </i>
-        </li>
-        <li>
-          <i class="fa fa-angle-double-right">
-            <a routerLink="/policy">Policy And Terms</a>
-          </i>
-        </li>
-        <li>
-          <i class="fa fa-angle-double-right">
-            <a routerLink="/quality">Quality</a>
-          </i>
-        </li>
-        <li>
-          <i class="fa fa-angle-double-right">
-            <a routerLink='/product-brochure'>Company Brochure</a>
-          </i>
-        </li>
-        <li>
-          <i class="fa fa-angle-double-right">
-            <a routerLink='/contactus'>Contact Us</a>
-          </i>
-        </li>
+          <ul>
+            <li *ngFor="let product of _productsByCategory;let index=index;">
+              <i class="fa fa-angle-double-right">
+                <a [routerLink]="['/paintcategorylist', product.prod_group]">{{product.prod_group_name}}</a>
+              </i>
+              <ul>
+                <li *ngFor="let prod of product.products">
+                  <a router='/paintcategorylist'>{{prod.prod_name}}</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <li>
+            <i class="fa fa-angle-double-right">
+              <a routerLink='/product-brochure' class="[ animate ]">Company Brochure</a>
+            </i>
+          </li>
+          <li>
+            <i class="fa fa-angle-double-right">
+              <a routerLink="/contactus" class="[ animate ]">Contact Us</a>
+            </i>
+          </li>
       </ul>
     </div>
   </div>

@@ -1,12 +1,16 @@
 <div class="container listProductsWrapper clearfix">
+    <h3>All Products </h3><br/>
   <div id="products" class="row list-group">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 products" *ngFor="let product of _productsByCategory | slice:0:4">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 products" *ngFor="let product of _productsByCategory">
       <div class="hovereffect">
-        <img class="img-responsive" src="{{product.imgUrl}}" alt="">
+        <div class='imageWrapper'>
+          <img class="img-responsive" src="{{product.imgUrl}}" alt="">
+          <div class='content'></div>
+        </div>
         <div class="overlay">
           <h2>{{product.cat_name}}</h2>
-          <p>
-            <a routerLink='/contactus'>I'm Interested</a>
+          <p class='interested'>
+            <a  class='interested' routerLink='/contactus'>I'm Interested</a>
           </p>
           <p class='prodUnitPrice'>Approx : {{product.unit_price}} / {{product.unit_price_unit}}</p>
         </div>
@@ -15,6 +19,6 @@
   </div>
   <a routerLink='/paintcategorylist' class='pull-right showAll'>Show All</a>
   <h4 *ngIf="!_productsByCategory?.length" class="text-center">
-    <img  class='loader' src="../../../assets/images/loader.gif" />
+    <img class='loader' src="../../../assets/images/loader.gif" />
   </h4>
 </div>
